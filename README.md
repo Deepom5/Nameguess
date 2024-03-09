@@ -1,3 +1,5 @@
+<img width="1437" alt="Screenshot 2024-03-09 at 10 13 16 PM" src="https://github.com/Deepom5/Nameguess/assets/64247104/bc78fcf7-e646-4f1d-aac1-efe8a030f7f6">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -12,6 +14,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
+
 You will also see any lint errors in the console.
 
 ### `npm test`
