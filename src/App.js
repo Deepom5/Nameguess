@@ -40,9 +40,13 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     console.log("the data nation ", data);
-    setNation(data.country);
+    
     setIsLoading(false);
     console.log("the data nation parse ", nation);
+    const libMax = Math.max(...data.country.map(item => item.probability))
+    const greaterProb = data.country.find(element => element.probability==libMax);
+    setNation(greaterProb);
+    console.log("the data nation max ", libMax, greaterProb);
   };
   // useEffect(() => {
   //   searchRecipes()
@@ -78,13 +82,18 @@ function App() {
                 </div>
                 <div className="recipes"> 
 
+<span className="category">Nationality: {nation.country_id} </span>
+
+</div>
+                {/* <div className="recipes"> 
+
                 <span className="category">Nationality: </span>
         {nation ? nation.map(nation => (
-          <h2>{nation.country_id}</h2>
+          <h2>{nation.country_id} with probability{nation.probability*100},</h2>
          
         )) :null}
                 
-                </div>
+                </div> */}
 
             </div>
            
